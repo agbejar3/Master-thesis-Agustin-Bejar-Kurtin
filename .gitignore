@@ -1,0 +1,34 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables / secrets
+.env
+
+# OS-specific junk files
+.DS_Store
+Thumbs.db
+
+# Generated outputs / not needed in the repo (regenerate by running the notebooks)
+Data_exploration.ipynb
+Sentences_AllAgree.txt
+*.png
+
+# Safety net: skip common large model-weight file formats.
+# You said finbert-finetuned/ is just small code/config, so this shouldn't
+# exclude anything you need — but it protects you if a large checkpoint
+# ever gets saved into that folder by accident.
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.h5
+*.ckpt
