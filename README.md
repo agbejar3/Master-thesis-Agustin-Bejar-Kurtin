@@ -7,13 +7,15 @@
 This project tests whether an uncertainty-driven cascade can offer a better balance between accuracy and computational cost than a single expensive model in financial text classification, while remaining interpretable. A lightweight logistic regression (Loughran-McDonald lexicon features + TF-IDF) handles sentences it is confident about; a fine-tuned FinBERT model is invoked only on the sentences the cheap stage declines to label. The pipeline is evaluated on Financial PhraseBank and SEntFiN, and on SEntFiN under two Stage 2 conditions — zero-shot transfer and in-domain fine-tuning — to test whether the cascade's value depends on the expensive stage actually being the stronger model.
 
 ## Repository Structure
-'''
+
+```
 ├── base_model.ipynb                  # Cascade pipeline on Financial PhraseBank (run this to reproduce PhraseBank results)
 ├── SentFin.ipynb                     # Cascade pipeline on SEntFiN, both Stage 2 conditions
 ├── finbert-finetuned/                 # FinBERT (finbert-tone) fine-tuned on SEntFiN's training split
 ├── financial_phrasebank_allagree.csv  # Dataset
 └── SEntFiN.csv                        # Dataset
-'''
+```
+
 > Note: exploratory notebooks, raw text extracts, and result plots (F1 benchmarks, confusion matrices, SHAP, reliability, threshold tradeoffs) are generated locally by running `base_model.ipynb` and `SentFin.ipynb`, and are not tracked in this repo — see `.gitignore`.
 
 ## Setup
